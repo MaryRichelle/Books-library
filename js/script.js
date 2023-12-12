@@ -1,6 +1,6 @@
 const apiUrl = 'https://www.googleapis.com/books/v1/volumes';
-const maxResults = 40;
-const query = 'motivation';
+const maxResults = 40; // numbers of books 
+const query = 'motivation'; // change query of your choice 
 
 
 const fullUrl = `https://www.googleapis.com/books/v1/volumes?maxResults=${maxResults}&q=${query}`;
@@ -26,12 +26,9 @@ fetch(fullUrl)
 
 function renderBooks(books) {
   const bookshelf = document.getElementById("bookshelf");
-  const front = document.querySelector(".front");
   books.forEach(book => {
     const figure = document.createElement("figure");
-
     figure.innerHTML = `
-    
         <img class="front" src=${book.volumeInfo.imageLinks.thumbnail} >
         <div class="book" data-book=${book.id}></div>
         <div class="buttons"><a href="#">Look inside</a><a href="#">Details</a></div>
@@ -47,7 +44,7 @@ function renderBooks(books) {
           </ul>
         </div>
     `;
-   
-     bookshelf.appendChild(figure);
+
+    bookshelf.appendChild(figure);
   });
 }
