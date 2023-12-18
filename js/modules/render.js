@@ -8,6 +8,6 @@ export function renderBooks(books) {
     bookshelf.appendChild(figure);
     const frontDiv = figure.querySelector(".book");
     const imageUrl = book.volumeInfo.imageLinks.thumbnail;
-    frontDiv.style.background = imageUrl ? "url('" + imageUrl + "')" : "red"
+    frontDiv.style.background = imageUrl ? `url(${imageUrl})` : url("../../img/alternative-image.png");
   });
 }
