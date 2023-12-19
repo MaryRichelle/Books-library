@@ -7,7 +7,7 @@ export function renderBooks(books) {
     figure.innerHTML = bookHtmlTemplate(book)
     bookshelf.appendChild(figure);
     const frontDiv = figure.querySelector(".book");
-    const imageUrl = book.volumeInfo.imageLinks.thumbnail;
-    frontDiv.style.background = imageUrl ? `url(${imageUrl})` : url("../../img/alternative-image.png");
+    const imageUrl = book.volumeInfo.imageLinks?.thumbnail || "../../img/assets/alternative-book-cover.png"
+    frontDiv.style.background = `url(${imageUrl})` ;
   });
 }

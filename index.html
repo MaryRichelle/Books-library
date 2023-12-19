@@ -11,10 +11,11 @@
 		content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
 	<meta name="author" content="Codrops" />
 	<link rel="shortcut icon" href="../favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/component.css" />
+	<link rel="stylesheet" href="./css/style.css">
 	<script src="js/lib/modernizr.custom.js"></script>
 </head>
 
@@ -30,6 +31,12 @@
 			<h1>Book Preview <span>with <a
 						href="http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/">BookBlock</a></span></h1>
 		</header>
+		<section>
+				<div class="search-container">
+					<input type="text" class="search-bar search" placeholder="search book by title or ISBN">
+					<button class="search-btn search">search</button>
+				</div>
+		</section>
 		<div class="main">
 			<div id="bookshelf" class="bookshelf">
 				<figure>

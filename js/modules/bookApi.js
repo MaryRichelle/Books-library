@@ -1,4 +1,9 @@
-export function fetchBooks(maxResults, query) {
+// @ts-check
+
+import { renderBooks } from './render.js';
+
+export function fetchBooks(query) {
+  const maxResults = 10;
   const fullUrl = `https://www.googleapis.com/books/v1/volumes?maxResults=${maxResults}&q=${query}`;
 
   return fetch(fullUrl)
@@ -7,5 +12,11 @@ export function fetchBooks(maxResults, query) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
+    }).then(data => {
+      const books = data.items;
+      renderBooks(books)
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
     });
 }

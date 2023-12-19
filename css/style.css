@@ -1,0 +1,15 @@
+.search-container {
+  padding: 1rem;
+  width: max-content;
+  margin: auto;
+}
+.search {
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0;
+  outline: none;
+  border: 1px solid rgb(214, 205, 205);
+}
+.search-bar {
+  width: 220px;
+}
